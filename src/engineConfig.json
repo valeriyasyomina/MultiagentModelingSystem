@@ -1,0 +1,244 @@
+{
+	"DrawingSceneConfiguration": {
+		"BackgroundColor": "ControlDark",
+		"RoadwayDelimiterColor": "White",	
+		"RoadBorderColor": "Black",
+		"RoadwaysNumber": 4,
+		"RoadwayDelimiterWidth": 2,
+		"RoadBorderWidth": 2,
+		"VehicleIconWidth": 40,
+		"VehicleIconHeight": 40,
+		"Scale": 5,
+	},
+	"TunnelConfiguration": {
+		"Lenght": 1000,
+		"RoadwaysConfiguration": [
+			{
+				"RandomGeneratorType": 0,
+				"Parametrs": [ 5, 7 ],
+			},
+			{
+				"RandomGeneratorType": 0,
+				"Parametrs": [ 4, 10 ],
+			},
+			{
+				"RandomGeneratorType": 0,
+				"Parametrs": [ 3, 5 ],
+			},
+			{
+				"RandomGeneratorType": 0,
+				"Parametrs": [ 6, 7 ],
+			},
+		],
+	},	
+	"DriverTypesConfiguration": [
+		{
+			"DrawColor": "Black",
+			"DrawWidth": 5,
+			"GenerationWeight": 1,
+		}
+	],
+	"VehicleTypesConfiguration": [
+		{			
+			"Speed": {
+				"Up": 27,
+				"Down": 16,
+			},
+			"Weight": {
+				"Up": 1000,
+				"Down": 600,
+			},
+			"PassengersNumber": {
+				"Up": 4,
+				"Down": 1,
+			},
+			"GenerationWeight": 2,
+			"Type": 0,	
+			"LenghtList": [ 3, 4, 5 ],
+			"IconsConfiguration": [
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\car\\car_pink_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\car\\car_pink_1.png",
+					"Direction": 1,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\car\\car_blue_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\car\\car_blue_1.png",
+					"Direction": 1,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\car\\car_gray_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\car\\car_gray_1.png",
+					"Direction": 1,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\car\\car_pink_blue_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\car\\car_pink_blue_1.png",
+					"Direction": 1,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\car\\car_red_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\car\\car_red_1.png",
+					"Direction": 1,
+				},
+			],	
+		},
+		{			
+			"Speed": {
+				"Up": 18,
+				"Down": 16,
+			},
+			"Weight": {
+				"Up": 5000,
+				"Down": 3000,
+			},
+			"PassengersNumber": {
+				"Up": 30,
+				"Down": 1,
+			},
+			"GenerationWeight": 1,
+			"Type": 1,	
+			"LenghtList": [ 5, 7, 8, 9, 10, 15 ],
+			"IconsConfiguration": [
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\bus\\bus_green_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\bus\\bus_green_1.png",
+					"Direction": 1,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\bus\\bus_pink_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\bus\\bus_pink_1.png",
+					"Direction": 1,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\bus\\bus_red_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\bus\\bus_red_1.png",
+					"Direction": 1,
+				},
+			],
+		},
+		{
+			"Speed": {
+				"Up": 19,
+				"Down": 16,
+			},
+			"Weight": {
+				"Up": 4000,
+				"Down": 2000,
+			},
+			"PassengersNumber": {
+				"Up": 5,
+				"Down": 1,
+			},
+			"GenerationWeight": 1,
+			"Type": 2,
+			"LenghtList": [ 5, 6, 7 ],		
+			"IconsConfiguration": [
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\service\\service_amb_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\service\\service_amb_1.png",
+					"Direction": 1,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\service\\service_cran_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\service\\service_cran_1.png",
+					"Direction": 1,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\service\\service_red_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\service\\service_red_1.png",
+					"Direction": 1,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\service\\service_cran_y_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\service\\service_cran_y_1.png",
+					"Direction": 1,
+				},
+			],
+		},
+		{
+			"Speed": {
+				"Up": 18,
+				"Down": 16,
+			},
+			"Weight": {
+				"Up": 20000,
+				"Down": 5000,
+			},
+			"PassengersNumber": {
+				"Up": 2,
+				"Down": 1,
+			},
+			"GenerationWeight": 2,
+			"Type": 3,	
+			"LenghtList": [ 7, 9, 10 ],
+			"IconsConfiguration": [
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\truck\\truck_blue_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\truck\\truck_blue_1.png",
+					"Direction": 1,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\truck\\truck_container_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\truck\\truck_container_1.png",
+					"Direction": 1,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\truck\\truck_container1_0.png",
+					"Direction": 0,
+				},
+				{
+					"Path": "C:\\Users\\Lera\\Desktop\\MultiagentModelingSystem\\src\\img\\truck\\truck_container1_1.png",
+					"Direction": 1,
+				},
+			],
+		},
+	],
+	"StartGenerationTime": 1,
+	"EndGenerationTime": 70,
+	"DetlaModelingTime": 1,
+	"AccidentTime": 70,
+	"Sleep": 500,
+}
