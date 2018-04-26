@@ -12,16 +12,23 @@ namespace MultiagentModelingEngine.Scene
 {
     public class MultiAgentSceneRenderer : ISceneRenderer
     {
+        public List<Vector> SmokeCoversKoordinates { get; set; }
         public MultiAgentSceneRenderer(IDrawWrapper drawContex, MultiAgentSceneDrawingConfig config)
         {
             DrawContext = drawContex ?? throw new ArgumentNullException($"{drawContex}");
-            Configuration = config ?? throw new ArgumentNullException($"{config}");            
+            Configuration = config ?? throw new ArgumentNullException($"{config}");
+            SmokeCoversKoordinates = new List<Vector>();
         }
 
         public IDrawWrapper DrawContext { get; protected set; }
         public int ContextWidth => DrawContext.Width;
         public int ContextHeigth => DrawContext.Height;
         public MultiAgentSceneDrawingConfig Configuration { get; protected set; }
+
+        public List<Vector> GetKoordinates()
+        {
+            return SmokeCoversKoordinates;
+        }
 
         public void InitializeContext()
         {
@@ -33,6 +40,21 @@ namespace MultiagentModelingEngine.Scene
             var pen = new Pen(Configuration.RoadBorderColor, Configuration.RoadBorderWidth);
             DrawContext.DrawLine(pen, 0, halfHeight, width, halfHeight);
             DrawRoadWayDelimiterLines();
+            DrawSmokeCovers();
+        }
+
+        private void DrawSmokeCovers()
+        {
+            var deltaX = DrawContext.Width / Configuration.SmokeCoversNumber;
+            var pen = new Pen(Configuration.SmokeCoverColor, Configuration.RoadwayDelimiterWidth * 4);            
+            for (int i = 0; i < Configuration.SmokeCoversNumber; i++)
+            {
+                var x = deltaX * (i + 1) - Configuration.SmokeCoverWidth / 2 - deltaX / 2;
+                DrawContext.DrawLine(pen, x, 0, x + Configuration.SmokeCoverWidth, 0);
+                DrawContext.DrawLine(pen, x, DrawContext.Height, x + Configuration.SmokeCoverWidth, DrawContext.Height);
+                SmokeCoversKoordinates.Add(new Vector(x + Configuration.SmokeCoverWidth / 2, 0));
+                SmokeCoversKoordinates.Add(new Vector(x + Configuration.SmokeCoverWidth / 2, DrawContext.Height));
+            }
         }
 
         private void DrawRoadWayDelimiterLines()

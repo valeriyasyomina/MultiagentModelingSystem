@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DriverConfigurationToDriverConverter.cs" />
+    <Compile Include="PersonConfigurationToPersonConverter.cs" />
+    <Compile Include="IconConvigurationToFireConverter.cs" />
     <Compile Include="RoadwayConfigurationToRoadwayConverter.cs" />
     <Compile Include="TunnelConfigurationToTunnelConverter.cs" />
     <Compile Include="VehicleConfigurationToVehicleConverter.cs" />

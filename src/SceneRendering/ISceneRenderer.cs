@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 namespace SceneRendering
 {
     public interface ISceneRenderer
-    {        
+    {
+        List<Vector> GetKoordinates();
         void Render(IScene scene);
         void InitializeContext();
         int ContextWidth { get; }

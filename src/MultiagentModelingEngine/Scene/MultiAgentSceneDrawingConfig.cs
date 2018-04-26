@@ -14,11 +14,12 @@ namespace MultiagentModelingEngine.Scene
         public Color BackgroundColor { get; set; }
         public Color RoadwayDelimiterColor { get; set; }
         public Color RoadBorderColor { get; set; }
+        public Color SmokeCoverColor { get; set; }
+        public int SmokeCoversNumber { get; set; }
         public int RoadwaysNumber { get; set; }
         public int RoadwayDelimiterWidth { get; set; }
-        public int RoadBorderWidth { get; set; }
-        public int VehicleIconWidth { get; set; }
-        public int VehicleIconHeight { get; set; }
+        public int SmokeCoverWidth { get; set; }
+        public int RoadBorderWidth { get; set; }      
         public int Scale { get; set; }
 
         public static MultiAgentSceneDrawingConfig ReadFromFile(string fileName)

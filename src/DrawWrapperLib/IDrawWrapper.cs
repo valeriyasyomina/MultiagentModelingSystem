@@ -12,6 +12,7 @@ namespace DrawWrapperLib
         void DrawIcon(Icon icon, int x, int y);
         void SetBackgroundColor(Color color);
         void DrawLine(Pen pen, int x1, int y1, int x2, int y2);
+        void DrawPoint(Pen pen, int x, int y);
         int Width { get; }
         int Height { get; }
     }

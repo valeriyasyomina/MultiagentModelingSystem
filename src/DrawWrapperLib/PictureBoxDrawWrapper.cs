@@ -22,6 +22,11 @@ namespace DrawWrapperLib
             Graphics = PictureBox.CreateGraphics();
         }
 
+        public void DrawPoint(Pen pen, int x, int y)
+        {
+            Graphics.DrawEllipse(pen, x - pen.Width / 2, y - pen.Width / 2, pen.Width, pen.Width);
+        }
+
         public void DrawIcon(Icon icon, int x, int y)
         {
             Graphics.DrawIcon(icon, x, y);
@@ -29,7 +34,7 @@ namespace DrawWrapperLib
 
         public void DrawLine(Pen pen, int x1, int y1, int x2, int y2)
         {
-            Graphics.DrawLine(pen, x1, y1, x2, y2);         
+            Graphics.DrawLine(pen, x1, y1, x2, y2);
         }
 
         public void SetBackgroundColor(Color color)

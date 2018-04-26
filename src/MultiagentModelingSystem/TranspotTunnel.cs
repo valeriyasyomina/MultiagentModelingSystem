@@ -29,6 +29,9 @@ namespace MultiagentModelingSystem
         {
             try
             {
+                // TODO: remove hardcode for PB size
+                tunnelPictureBox.Width = 1100;
+                tunnelPictureBox.Height = 400;
                 EngineConfiguration = ModelingEngineConfiguration.ReadFromFile(@"C:\Users\Lera\Desktop\MultiagentModelingSystem\src\engineConfig.json");
                 var sceneRenderer = new MultiAgentSceneRenderer(new PictureBoxDrawWrapper(tunnelPictureBox), EngineConfiguration.DrawingSceneConfiguration);
                 Engine = new MultiagentModelingEngine.MultiagentModelingEngine(EngineConfiguration, sceneRenderer);

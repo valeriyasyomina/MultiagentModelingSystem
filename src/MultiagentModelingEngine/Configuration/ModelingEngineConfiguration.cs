@@ -16,7 +16,7 @@ namespace MultiagentModelingEngine.Configuration
         public MultiAgentSceneDrawingConfig DrawingSceneConfiguration { get; set; }
         public TunnelConfiguration TunnelConfiguration { get; set; }            
         public List<VehicleConfiguration> VehicleTypesConfiguration { get; set; }
-        public List<DriverConfiguration> DriverTypesConfiguration { get; set; }
+        public List<PersonConfiguration> PersonTypesConfiguration { get; set; }
         public int StartGenerationTime { get; set; }
         public int EndGenerationTime { get; set; }
         public int AccidentTime { get; set; }

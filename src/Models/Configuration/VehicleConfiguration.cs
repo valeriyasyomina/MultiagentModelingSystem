@@ -15,7 +15,7 @@ namespace Models.Configuration
         // defines how frequently this vehicle will be generated
         public int GenerationWeight { get; set; }      
         public VehicleType Type { get; set; }
-        public List<IconCongifuration> IconsConfiguration { get; set; }
+        public List<VehicleIconConfiguration> IconsConfiguration { get; set; }
         public List<int> LenghtList { get; set; }
     }
 }

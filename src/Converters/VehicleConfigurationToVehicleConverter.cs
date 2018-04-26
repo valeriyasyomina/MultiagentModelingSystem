@@ -11,7 +11,7 @@ namespace Converters
 {
     public static class VehicleConfigurationToVehicleConverter
     {
-        public static Vehicle Convert(VehicleConfiguration configuration, TravelDirection direction, Size iconSize)
+        public static Vehicle Convert(VehicleConfiguration configuration, TravelDirection direction)
         {
             var random = new Random(DateTime.Now.Millisecond);
             var vehicle = new Vehicle()
@@ -25,9 +25,10 @@ namespace Converters
             var lengthIndex = random.Next(0, configuration.LenghtList.Count);
             vehicle.Length = configuration.LenghtList[lengthIndex];
 
-            var iconPathes = configuration.IconsConfiguration.Where(c => c.Direction == direction).ToList();
-            var iconPathIndex = random.Next(0, iconPathes.Count);
-            var bt = new Bitmap(Image.FromFile(iconPathes[iconPathIndex].Path), iconSize.Width, iconSize.Height);
+            var icons = configuration.IconsConfiguration.Where(c => c.Direction == direction).ToList();
+            var iconPathIndex = random.Next(0, icons.Count);
+            var icon = icons[iconPathIndex];
+            var bt = new Bitmap(Image.FromFile(icon.Path), icon.Width, icon.Height);
             vehicle.Icon = Icon.FromHandle(bt.GetHicon());
             return vehicle;
         }

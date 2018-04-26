@@ -10,15 +10,14 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Vehicle: DrawableEntity
+    public class Vehicle: IconEntity
     {        
         public int Speed { get; set; }
         public int Weight { get; set; }
         public int PassengersNumber { get; set; }
-        public Driver Driver { get; set; }
+        public Person Driver { get; set; }
         public VehicleType Type { get; set; }
-        public TravelDirection Direction { get; set; }
-        public Icon Icon { get; set; }
+        public TravelDirection Direction { get; set; }       
         public int Length { get; set; }
 
         public override int X { get; set; }
@@ -26,12 +25,7 @@ namespace Models
 
         public Vehicle()
         {
-            Driver = new Driver();
-        }
-
-        public override void Render(IDrawWrapper drawContex)
-        {
-            drawContex.DrawIcon(Icon, X, Y);
-        }
+            Driver = new Person();
+        }        
     }
 }

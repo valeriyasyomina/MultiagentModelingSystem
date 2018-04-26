@@ -12,6 +12,9 @@ namespace Models.Configuration
         /// Tunnel length in meters
         /// </summary>
         public int Lenght { get; set; }
+        public int SmokeCoversNumber { get; set; }
         public List<RoadwayConfiguration> RoadwaysConfiguration { get; set; }
+        public IconCongifuration SmokeConfiguration { get; set; }
+        public IconCongifuration FireConfiguration { get; set; }
     }
 }
