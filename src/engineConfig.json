@@ -2,25 +2,28 @@
 	"DrawingSceneConfiguration": {
 		"BackgroundColor": "ControlDark",
 		"RoadwayDelimiterColor": "White",	
-		"RoadBorderColor": "Black",
-		"SmokeCoverColor": "Black",
-		"RoadwaysNumber": 4,
-		"SmokeCoversNumber": 4,
-		"SmokeCoverWidth": 10,
+		"RoadBorderColor": "Black",	
+		"RoadwaysNumber": 4,		
 		"RoadwayDelimiterWidth": 2,
 		"RoadBorderWidth": 2,	
 		"Scale": 5,
+		"SmokeCoverConfiguration": {
+			"MaxPeopleAmount": 10,
+			"Amount": 4,
+			"Width": 10,
+			"Color": "Black",
+		},
 	},
 	"TunnelConfiguration": {
 		"Lenght": 1000,
 		"RoadwaysConfiguration": [
 			{
 				"RandomGeneratorType": 0,
-				"Parametrs": [ 5, 7 ],
+				"Parametrs": [ 4, 7 ],
 			},
 			{
 				"RandomGeneratorType": 0,
-				"Parametrs": [ 4, 10 ],
+				"Parametrs": [ 4, 7 ],
 			},
 			{
 				"RandomGeneratorType": 0,
@@ -28,7 +31,7 @@
 			},
 			{
 				"RandomGeneratorType": 0,
-				"Parametrs": [ 6, 7 ],
+				"Parametrs": [ 3, 7 ],
 			},
 		],
 		"FireConfiguration": {
@@ -51,11 +54,35 @@
 			},
 			"GenerationWeight": 1,
 			"Sex": [0, 1],
-			"PersonalityPsychotype": [0, 1],
+			"MakeDesicionTime": {
+				0: 5,
+				1: 10,
+			},
+			"DisorientationTime": {
+				0: 4,
+				1: 8,
+			},
+			"PersonalityTemperament": [0, 1, 2, 3],
 			"Age": {
 				"Up": 79,
-				"Down": 6,
+				"Down": 10,
 			},
+			"InSmokeDeltaTime": [
+				{
+					"AgeRange": {
+						"Up": 50,
+						"Down": 10,
+					},
+					"DeltaTime": 1200,
+				},
+				{
+					"AgeRange": {
+						"Up": 79,
+						"Down": 51,
+					},
+					"DeltaTime": 600,
+				},
+			],
 		}
 	],
 	"VehicleTypesConfiguration": [
@@ -316,8 +343,11 @@
 			],
 		},
 	],
-	"StartGenerationTime": 1,
-	"EndGenerationTime": 100,
+	"LeaveVehiclesImmediately": true,
+	"ConsiderTemperament": false,
+	"StartModelingTime": 1,
+	"EndModelingTime": 50,
+	"MaxPeopleAmount": 100,
 	"DetlaModelingTime": 1,
 	"AccidentTime": 20,
 	"Sleep": 500,

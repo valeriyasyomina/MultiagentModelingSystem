@@ -43,11 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\ModelingEngineConfiguration.cs" />
+    <Compile Include="ModelingResult.cs" />
     <Compile Include="MultiagentModelingEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scene\MultiAgentScene.cs" />
     <Compile Include="Scene\MultiAgentSceneDrawingConfig.cs" />
-    <Compile Include="Scene\MultiAgentSceneConfigParameters.cs" />
     <Compile Include="Scene\MultiAgentSceneRenderer.cs" />
   </ItemGroup>
   <ItemGroup>

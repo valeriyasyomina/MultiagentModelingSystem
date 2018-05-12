@@ -11,12 +11,11 @@ namespace Common
     public class IconEntity: DrawableEntity
     {
         public Icon Icon { get; set; }
-        public override int X { get; set; }
-        public override int Y { get; set; }
+        public override Vector Position { get; set; } 
 
         public override void Render(IDrawWrapper drawContex)
         {
-            drawContex.DrawIcon(Icon, X, Y - Icon.Height / 2);
+            drawContex.DrawIcon(Icon, Position.X - Icon.Width / 2, Position.Y - Icon.Height / 2);
         }
     }
 }

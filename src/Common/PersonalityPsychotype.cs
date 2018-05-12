@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace Common
 {
-    public enum PersonalityPsychotype { SANGUINE, PHLEGMATIC }
+    public enum PersonalityTemperament { SANGUINE, CHOLERIC, PHLEGMATIC, MELANCHOLIC }
 }

@@ -10,9 +10,10 @@ namespace Models.Configuration
     public class VehicleConfiguration
     {
         public DecimalRange Speed { get; set; }
+        // not use
         public DecimalRange Weight { get; set; }
         public DecimalRange PassengersNumber { get; set; }
-        // defines how frequently this vehicle will be generated
+        // not use
         public int GenerationWeight { get; set; }      
         public VehicleType Type { get; set; }
         public List<VehicleIconConfiguration> IconsConfiguration { get; set; }

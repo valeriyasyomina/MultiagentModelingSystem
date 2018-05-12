@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomValueGenerator", "RandomValueGenerator\RandomValueGenerator.csproj", "{CD874AD9-9362-4E2F-8126-D45B2B97DF79}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Installer", "Installer\Installer.csproj", "{C9A243E5-6443-4A00-ACAC-C20A61286264}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{CD874AD9-9362-4E2F-8126-D45B2B97DF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD874AD9-9362-4E2F-8126-D45B2B97DF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD874AD9-9362-4E2F-8126-D45B2B97DF79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A243E5-6443-4A00-ACAC-C20A61286264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A243E5-6443-4A00-ACAC-C20A61286264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A243E5-6443-4A00-ACAC-C20A61286264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A243E5-6443-4A00-ACAC-C20A61286264}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

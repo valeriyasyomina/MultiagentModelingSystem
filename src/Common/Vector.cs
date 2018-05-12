@@ -15,5 +15,10 @@ namespace Common
         }
         public int X { get; set; }
         public int Y { get; set; }
+
+        public static double Distance(Vector vector1, Vector vector2)
+        {
+            return Math.Sqrt((vector1.X - vector2.X) * (vector1.X - vector2.X) + (vector1.Y - vector2.Y) * (vector1.Y - vector2.Y));
+        }
     }
 }

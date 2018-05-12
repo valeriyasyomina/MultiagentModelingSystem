@@ -1,4 +1,5 @@
 ﻿using Common;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace SceneRendering
 {
     public interface ISceneRenderer
     {
-        List<Vector> GetKoordinates();
+        List<SmokeCover> GetSmokeCovers();
         void Render(IScene scene);
         void InitializeContext();
         int ContextWidth { get; }

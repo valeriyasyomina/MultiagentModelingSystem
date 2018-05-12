@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Models.Configuration;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -13,14 +14,12 @@ namespace MultiagentModelingEngine.Scene
     {
         public Color BackgroundColor { get; set; }
         public Color RoadwayDelimiterColor { get; set; }
-        public Color RoadBorderColor { get; set; }
-        public Color SmokeCoverColor { get; set; }
-        public int SmokeCoversNumber { get; set; }
+        public Color RoadBorderColor { get; set; }   
         public int RoadwaysNumber { get; set; }
-        public int RoadwayDelimiterWidth { get; set; }
-        public int SmokeCoverWidth { get; set; }
+        public int RoadwayDelimiterWidth { get; set; }  
         public int RoadBorderWidth { get; set; }      
         public int Scale { get; set; }
+        public SmokeCoverConfiguration SmokeCoverConfiguration { get; set; }
 
         public static MultiAgentSceneDrawingConfig ReadFromFile(string fileName)
         {

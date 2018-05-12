@@ -7,17 +7,19 @@ using System.Threading.Tasks;
 using DrawWrapperLib;
 using Common;
 using System.Drawing;
+using Models;
+using Converters;
 
 namespace MultiagentModelingEngine.Scene
 {
     public class MultiAgentSceneRenderer : ISceneRenderer
     {
-        public List<Vector> SmokeCoversKoordinates { get; set; }
+        public List<SmokeCover> SmokeCovers { get; set; }
         public MultiAgentSceneRenderer(IDrawWrapper drawContex, MultiAgentSceneDrawingConfig config)
         {
             DrawContext = drawContex ?? throw new ArgumentNullException($"{drawContex}");
             Configuration = config ?? throw new ArgumentNullException($"{config}");
-            SmokeCoversKoordinates = new List<Vector>();
+            SmokeCovers = new List<SmokeCover>();
         }
 
         public IDrawWrapper DrawContext { get; protected set; }
@@ -25,9 +27,9 @@ namespace MultiagentModelingEngine.Scene
         public int ContextHeigth => DrawContext.Height;
         public MultiAgentSceneDrawingConfig Configuration { get; protected set; }
 
-        public List<Vector> GetKoordinates()
+        public List<SmokeCover> GetSmokeCovers()
         {
-            return SmokeCoversKoordinates;
+            return SmokeCovers;
         }
 
         public void InitializeContext()
@@ -45,15 +47,24 @@ namespace MultiagentModelingEngine.Scene
 
         private void DrawSmokeCovers()
         {
-            var deltaX = DrawContext.Width / Configuration.SmokeCoversNumber;
-            var pen = new Pen(Configuration.SmokeCoverColor, Configuration.RoadwayDelimiterWidth * 4);            
-            for (int i = 0; i < Configuration.SmokeCoversNumber; i++)
+            var deltaX = DrawContext.Width / Configuration.SmokeCoverConfiguration.Amount;
+            var pen = new Pen(Configuration.SmokeCoverConfiguration.Color, Configuration.RoadwayDelimiterWidth * 4);            
+            for (int i = 0; i < Configuration.SmokeCoverConfiguration.Amount; i++)
             {
-                var x = deltaX * (i + 1) - Configuration.SmokeCoverWidth / 2 - deltaX / 2;
-                DrawContext.DrawLine(pen, x, 0, x + Configuration.SmokeCoverWidth, 0);
-                DrawContext.DrawLine(pen, x, DrawContext.Height, x + Configuration.SmokeCoverWidth, DrawContext.Height);
-                SmokeCoversKoordinates.Add(new Vector(x + Configuration.SmokeCoverWidth / 2, 0));
-                SmokeCoversKoordinates.Add(new Vector(x + Configuration.SmokeCoverWidth / 2, DrawContext.Height));
+                var x = deltaX * (i + 1) - Configuration.SmokeCoverConfiguration.Width / 2 - deltaX / 2;
+                DrawContext.DrawLine(pen, x, 0, x + Configuration.SmokeCoverConfiguration.Width, 0);
+                DrawContext.DrawLine(pen, x, DrawContext.Height, x + Configuration.SmokeCoverConfiguration.Width, DrawContext.Height);
+                var upSmokeCover = SmokeCoverConfigurationToSmokeCoverConverter.Convert(Configuration.SmokeCoverConfiguration);
+                upSmokeCover.Position = new Vector(x + Configuration.SmokeCoverConfiguration.Width / 2, 0);
+
+                var downSmokeCover = SmokeCoverConfigurationToSmokeCoverConverter.Convert(Configuration.SmokeCoverConfiguration);
+                downSmokeCover.Position = new Vector(x + Configuration.SmokeCoverConfiguration.Width / 2, DrawContext.Height);
+
+                if (SmokeCovers.Count != Configuration.SmokeCoverConfiguration.Amount * 2)
+                {
+                    SmokeCovers.Add(upSmokeCover);
+                    SmokeCovers.Add(downSmokeCover);
+                }
             }
         }
 

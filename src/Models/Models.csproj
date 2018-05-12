@@ -44,6 +44,7 @@
     <Compile Include="Configuration\PersonConfiguration.cs" />
     <Compile Include="Configuration\IconCongifuration.cs" />
     <Compile Include="Configuration\RoadwayConfiguration.cs" />
+    <Compile Include="Configuration\SmokeCoverConfiguration.cs" />
     <Compile Include="Configuration\TunnelConfiguration.cs" />
     <Compile Include="Configuration\VehicleIconConfiguration.cs" />
     <Compile Include="Person.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roadway.cs" />
     <Compile Include="Smoke.cs" />
+    <Compile Include="SmokeCover.cs" />
     <Compile Include="Tunnel.cs" />
     <Compile Include="Vehicle.cs" />
     <Compile Include="Configuration\VehicleConfiguration.cs" />

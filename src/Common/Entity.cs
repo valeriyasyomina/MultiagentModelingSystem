@@ -8,5 +8,6 @@ namespace Common
 {
     public abstract class Entity
     {
+        public abstract Vector Position { get; set; }
     }
 }

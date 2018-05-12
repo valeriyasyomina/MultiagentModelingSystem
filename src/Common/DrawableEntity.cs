@@ -9,9 +9,10 @@ namespace Common
 {
     public abstract class DrawableEntity: Entity
     {
-        public abstract int X { get; set; }
-        public abstract int Y { get; set; }
-    
+        public DrawableEntity()
+        {
+            Position = new Vector(0, 0);
+        }
         public abstract void Render(IDrawWrapper drawContex);
     }
 }

@@ -14,6 +14,8 @@ namespace Converters
         {
             return new Tunnel()
             {
+                People = new List<Person>(),
+                RoadwayMatrix = new Common.RoadwayMatrix(),
                 Length = configuration.Lenght,
                 Roadways = configuration.RoadwaysConfiguration
                 .Select(r => RoadwayConfigurationToRoadwayConverter.Convert(r)).ToList()

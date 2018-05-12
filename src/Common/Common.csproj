@@ -49,6 +49,7 @@
     <Compile Include="PersonSpeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DecimalRange.cs" />
+    <Compile Include="RoadwayMatrix.cs" />
     <Compile Include="Sex.cs" />
     <Compile Include="Vector.cs" />
   </ItemGroup>
