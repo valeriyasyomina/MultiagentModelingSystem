@@ -19,19 +19,19 @@
 		"RoadwaysConfiguration": [
 			{
 				"RandomGeneratorType": 0,
-				"Parametrs": [ 4, 7 ],
+				"Parametrs": [ 5, 7 ],
 			},
 			{
 				"RandomGeneratorType": 0,
 				"Parametrs": [ 4, 7 ],
-			},
-			{
-				"RandomGeneratorType": 0,
-				"Parametrs": [ 3, 5 ],
 			},
 			{
 				"RandomGeneratorType": 0,
 				"Parametrs": [ 3, 7 ],
+			},
+			{
+				"RandomGeneratorType": 0,
+				"Parametrs": [ 4, 7 ],
 			},
 		],
 		"FireConfiguration": {

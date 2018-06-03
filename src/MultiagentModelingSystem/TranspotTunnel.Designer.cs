@@ -133,14 +133,14 @@
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // помощьToolStripMenuItem
             // 
             this.помощьToolStripMenuItem.Name = "помощьToolStripMenuItem";
-            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.помощьToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.помощьToolStripMenuItem.Text = "Помощь";
             this.помощьToolStripMenuItem.Click += new System.EventHandler(this.помощьToolStripMenuItem_Click);
             // 
@@ -238,7 +238,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1574, 721);
+            this.ClientSize = new System.Drawing.Size(1574, 544);
             this.Controls.Add(this.lblVehiclesLeftTunnelAmount);
             this.Controls.Add(this.lblAllVehiclesAmount);
             this.Controls.Add(this.lblPeopleInSmokeCoversAmount);
